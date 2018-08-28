@@ -1,0 +1,10 @@
+
+ALTER TABLE 'table_name' ADD COLUMNS ('new column name' 'data type');
+
+#If you get the below error UNSET table. This is when Avro schema is used
+#Error: Error while processing statement: FAILED: Execution Error, 
+#return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. 
+#Not allowed to alter schema of Avro stored table having external schema. 
+#Consider removing avro.schema.literal or avro.schema.url from table properties. (state=08S01,code=1)
+
+ALTER TABLE 'table name here' UNSET TBLPROPERTIES ('avro.schema.url')

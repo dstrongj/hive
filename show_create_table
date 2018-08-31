@@ -1,0 +1,3 @@
+#Shows create table query
+
+SHOW CREATE TABLE 'table name';
